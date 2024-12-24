@@ -19,7 +19,7 @@
 
 body {
     background-color: var(--color-princ);
-}-webkit-tap-highlight-color
+}
 
 header {
     z-index: 99999;
