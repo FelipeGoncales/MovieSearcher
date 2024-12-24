@@ -4,18 +4,12 @@ const pResponse = document.getElementById('response');
 inputMovie.addEventListener('input', () => {
     let filmName = inputMovie.value;
 
-    while (filmName.includes(':')) {
-        filmName = filmName.replace(':', '%3A');
-    };
-
-    while (filmName.includes(' ')) {
-        filmName  = filmName.replace(' ', '+');
-    };
+    filmName = encodeURIComponent(filmName)
 
     const url = `https://www.omdbapi.com/?apikey=5c634cc7&s=${filmName}`;
 
     fetch(url, {
-        methods: 'GET'
+        method: 'GET'
     })
         .then((result) => {
             return result.json(); 
