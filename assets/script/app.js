@@ -12,7 +12,7 @@ inputMovie.addEventListener('input', () => {
         filmName  = filmName.replace(' ', '+');
     };
 
-    const url = `http://www.omdbapi.com/?apikey=5c634cc7&s=${filmName}`;
+    const url = `https://www.omdbapi.com/?apikey=5c634cc7&s=${filmName}`;
 
     fetch(url, {
         methods: 'GET'
