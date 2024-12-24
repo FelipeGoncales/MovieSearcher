@@ -4,7 +4,7 @@ const pResponse = document.getElementById('response');
 inputMovie.addEventListener('input', () => {
     let filmName = inputMovie.value;
 
-    filmName = encodeURIComponent(filmName)
+    filmName = encodeURIComponent(filmName);
 
     const url = `https://www.omdbapi.com/?apikey=5c634cc7&s=${filmName}`;
 
