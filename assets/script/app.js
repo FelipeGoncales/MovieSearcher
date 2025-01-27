@@ -2,7 +2,7 @@ const inputMovie = document.getElementById('input-movie');
 const pResponse = document.getElementById('response');
 
 inputMovie.addEventListener('input', () => {
-    let filmName = inputMovie.value;
+    let filmName = inputMovie.value.toLowerCase();
 
     filmName = encodeURIComponent(filmName);
 
@@ -16,7 +16,7 @@ inputMovie.addEventListener('input', () => {
         })
         .then((result) => {
             if (result.Response == 'False') {
-                pResponse.innerHTML = `<p class='text-site'><span>Nada</span> encontrado</p>`;
+                pResponse.innerHTML = `<p class='text-site'><span>Nothing</span> found</p>`;
                 return;
             };
 
